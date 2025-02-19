@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Link Css Global -->
+    <link rel="stylesheet" href="/Style/global.css">
+
+    <title>MKM Center</title>
+</head>
+<body class="min-h-screen flex flex-col bg-white">
+    <nav class="bg-[#FC6736] border-gray-200">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <!-- Logo -->
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="/Images/logo_mkm.svg" class="h-8" alt="MKM Logo" />
+            </a>
+    
+            <!-- Search & Menu Button -->
+            <div class="flex md:order-2">
+                <!-- Search Button (Mobile) -->
+                <button type="button" data-collapse-toggle="navbar-search" aria-controls="navbar-search" aria-expanded="false" class="md:hidden text-white hover:bg-[#e85c2b] focus:ring-4 focus:ring-[#d9531f] rounded-lg text-sm p-2.5 me-1">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                    </svg>
+                    <span class="sr-only">Search</span>
+                </button>
+    
+                <!-- Search Input (Hidden in Mobile) -->
+                <div class="relative hidden md:block">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3">
+                        <svg class="w-4 h-4 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                        </svg>
+                    </div>
+                    <input type="text" class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500" placeholder="Search...">
+                </div>
+    
+                <!-- Hamburger Menu -->
+                <button data-collapse-toggle="navbar-search" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden hover:bg-[#e85c2b] focus:outline-none focus:ring-2 focus:ring-[#d9531f]" aria-controls="navbar-search" aria-expanded="false">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                    <span class="sr-only">Open main menu</span>
+                </button>
+            </div>
+    
+            <!-- Navigation Menu -->
+            <div class="hidden w-full md:flex md:w-auto md:order-1" id="navbar-search">
+                <ul class="flex flex-col md:flex-row md:space-x-8 font-medium p-4 md:p-0 mt-4 md:mt-0 rounded-lg bg-[#FC6736] md:bg-transparent">
+                    <li>
+                        <a href="#" class="block py-2 px-3 text-white rounded-md hover:bg-[#e85c2b] md:hover:bg-transparent md:hover:text-[#0C2D57] active:text-[#0C2D57]">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 px-3 text-white rounded-md hover:bg-[#e85c2b] md:hover:bg-transparent md:hover:text-[#0C2D57] active:text-[#0C2D57]">About</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 px-3 text-white rounded-md hover:bg-[#e85c2b] md:hover:bg-transparent md:hover:text-[#0C2D57] active:text-[#0C2D57]">Services</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    
+    <!-- Main Content Container -->
+    <div class="max-w-[1400px] mx-auto flex flex-col md:flex-row flex-1 mt-4 px-4 md:px-6">
+        <aside class="w-full md:w-64 bg-white shadow-lg rounded-lg p-4 mb-6 md:mb-0 md:mr-4">
+            <nav id="mainNav" class="hidden md:block">
+                <p class="text-gray-500 font-medium mb-3 text-sm hidden md:block">MENU</p>
+                <hr class="mb-3">
+                <ul class="space-y-2">
+                    <li>
+                        <a href="#" class="flex items-center p-2 text-gray-700 rounded-lg hover:bg-[#FC6736] hover:text-white transition-colors duration-200">
+                            <span class="ml-3">Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center p-2 text-gray-700 rounded-lg hover:bg-[#FC6736] hover:text-white transition-colors duration-200">
+                            <span class="ml-3">Download</span>
+                        </a>
+                    </li>
+                    <!-- Dropdown Proyek Saya -->
+                    <li>
+                        <button class="flex items-center justify-between w-full p-2 text-gray-700 rounded-lg hover:bg-[#FC6736] hover:text-white transition-colors duration-200" onclick="toggleDropdown('proyekDropdown')">
+                            <span class="ml-3">Proyek Saya</span>
+                            <svg class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <ul id="proyekDropdown" class="hidden pl-6 md:pl-8 mt-2 space-y-1">
+                            <li>
+                                <a href="#" class="block p-2 text-sm text-gray-700 rounded-lg hover:bg-[#FC6736] hover:text-white transition-colors duration-200">
+                                    Proyek Aktif
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block p-2 text-sm text-gray-700 rounded-lg hover:bg-[#FC6736] hover:text-white transition-colors duration-200">
+                                    Proyek Selesai
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Dropdown Kategori Bidang -->
+                    <li>
+                        <button class="flex items-center justify-between w-full p-2 text-gray-700 rounded-lg hover:bg-[#FC6736] hover:text-white transition-colors duration-200" onclick="toggleDropdown('kategoriDropdown')">
+                            <span class="ml-3">Kategori Bidang</span>
+                            <svg class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <ul id="kategoriDropdown" class="hidden pl-6 md:pl-8 mt-2 space-y-1">
+                            <!-- Teknologi -->
+                            <li>
+                                <button class="flex items-center justify-between w-full p-2 text-gray-700 rounded-lg hover:bg-[#FC6736] hover:text-white transition-colors duration-200" onclick="toggleDropdown('teknologiDropdown')">
+                                    <span class="ml-3">Teknologi</span>
+                                    <svg class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                                <ul id="teknologiDropdown" class="hidden pl-6 mt-2 space-y-1">
+                                    <li>
+                                        <a href="#" class="block p-2 text-xs md:text-sm text-gray-700 rounded-lg hover:bg-[#FC6736] hover:text-white transition-colors duration-200">
+                                            AI & Machine Learning
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block p-2 text-xs md:text-sm text-gray-700 rounded-lg hover:bg-[#FC6736] hover:text-white transition-colors duration-200">
+                                            Web Development
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- Kesehatan -->
+                            <li>
+                                <button class="flex items-center justify-between w-full p-2 text-gray-700 rounded-lg hover:bg-[#FC6736] hover:text-white transition-colors duration-200" onclick="toggleDropdown('kesehatanDropdown')">
+                                    <span class="ml-3">Kesehatan</span>
+                                    <svg class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                                <ul id="kesehatanDropdown" class="hidden pl-6 mt-2 space-y-1">
+                                    <li>
+                                        <a href="#" class="block p-2 text-xs md:text-sm text-gray-700 rounded-lg hover:bg-[#FC6736] hover:text-white transition-colors duration-200">
+                                            Gizi & Nutrisi
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block p-2 text-xs md:text-sm text-gray-700 rounded-lg hover:bg-[#FC6736] hover:text-white transition-colors duration-200">
+                                            Olahraga & Kesehatan
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- Pendidikan -->
+                            <li>
+                                <button class="flex items-center justify-between w-full p-2 text-gray-700 rounded-lg hover:bg-[#FC6736] hover:text-white transition-colors duration-200" onclick="toggleDropdown('pendidikanDropdown')">
+                                    <span class="ml-3">Pendidikan</span>
+                                    <svg class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                                <ul id="pendidikanDropdown" class="hidden pl-6 mt-2 space-y-1">
+                                    <li>
+                                        <a href="#" class="block p-2 text-xs md:text-sm text-gray-700 rounded-lg hover:bg-[#FC6736] hover:text-white transition-colors duration-200">
+                                            Pembelajaran Online
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block p-2 text-xs md:text-sm text-gray-700 rounded-lg hover:bg-[#FC6736] hover:text-white transition-colors duration-200">
+                                            Pendidikan Anak
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Content Section -->
+        <section class="flex-grow p-4 md:p-6 bg-white shadow-lg rounded-lg">
+            <h3 class="text-xl font-semibold mb-6 md:mb-8">Lihat Modul</h3>
+            
+            <!-- Module Section -->
+            <div class="mb-8 md:mb-12">
+                <div class="flex flex-col md:flex-row gap-6 md:gap-8 mb-6 items-center md:items-start">
+                    <div class="w-full md:w-52 h-52 bg-gray-100 flex items-center justify-center border rounded-lg overflow-hidden">
+                        <img src="/Images/image.png" alt="cover-project" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-grow text-center md:text-left">
+                        <div class="mb-4">
+                            <p class="text-sm text-gray-600">Judul:</p>
+                            <h4 class="text-lg font-medium">
+                                Modul Penguatan Kompetensi Kewarganegaraan Multikultural Pada Perguruan Tinggi
+                            </h4>
+                        </div>
+                        <div class="mb-4">
+                            <p class="text-sm text-gray-600">Penulis:</p>
+                            <p class="font-medium">Mas Fierna Janvierna Lusie Putri S.Pd., M.Pd.</p>
+                        </div>
+                        <div class="flex justify-between items-center md:justify-start md:gap-8">
+                            <div>
+                                <p class="text-sm text-gray-600">Tahun:</p>
+                                <p class="font-medium">2025</p>
+                            </div>
+                            <button class="flex items-center text-[#0C2D57] hover:text-[#FC6736] transition duration-200">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                                </svg>
+                                <span class="ml-2 text-sm">Download</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="border-gray-200">
+
+            <!-- Proyek Section -->
+            <div class="mb-8 md:mb-12 mt-6 md:mt-8">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-xl font-semibold">Proyek Terakhir</h3>
+                </div>
+                
+                <!-- Project Content -->
+                <div class="flex flex-col md:flex-row gap-6 md:gap-8 items-center md:items-start">
+                    <div class="w-full md:w-52 h-52 bg-gray-100 flex items-center justify-center border rounded-lg overflow-hidden">
+                        <img src="/Images/image.png" alt="cover-project" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-grow text-center md:text-left">
+                        <div class="mb-4">
+                            <p class="text-sm text-gray-600">Judul:</p>
+                            <h4 class="text-lg font-medium">Ini Ceritanya Judul</h4>
+                        </div>
+                        <div class="mb-4">
+                            <p class="text-sm text-gray-600">Kategori:</p>
+                            <p class="font-medium">Kategorinya</p>
+                        </div>
+                        <div class="mb-4">
+                            <p class="text-sm text-gray-600">Tema:</p>
+                            <p class="font-medium">Temanya</p>
+                        </div>
+                        <button class="mt-2 px-4 py-2 bg-[#FC6736] text-white rounded-lg hover:bg-[#e55a2d] transition duration-200">
+                            Lihat Detail
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            
+            <!-- Proyek Mahasiswa Section -->
+            <div class="mb-8 md:mb-12">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-xl font-semibold">Proyek Mahasiswa</h3>
+                    <a href="#" class="text-sm text-[#0C2D57] hover:text-[#FC6736] hover:underline transition-colors duration-200">Lainnya...</a>
+                </div>
+
+                <!-- Projects Grid Container - Responsive Grid -->
+                <div class="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                    <!-- Project Card 1 -->
+                    <div class="project-card w-full transition-transform duration-200 hover:scale-105">
+                        <div class="w-full aspect-square bg-gray-100 flex items-center justify-center border mb-2 rounded-lg overflow-hidden">
+                            <img src="/Images/project1.jpg" alt="Project 1" class="w-full h-full object-cover hover:opacity-90 transition-opacity duration-200">
+                        </div>
+                        <h4 class="text-sm font-medium truncate">Aplikasi Pendidikan Anak</h4>
+                        <p class="text-xs text-gray-600 truncate">by Siti Nurhaliza</p>
+                    </div>
+
+                    <!-- Project Card 2 -->
+                    <div class="project-card w-full transition-transform duration-200 hover:scale-105">
+                        <div class="w-full aspect-square bg-gray-100 flex items-center justify-center border mb-2 rounded-lg overflow-hidden">
+                            <img src="/Images/project2.jpg" alt="Project 2" class="w-full h-full object-cover hover:opacity-90 transition-opacity duration-200">
+                        </div>
+                        <h4 class="text-sm font-medium truncate">Platform Pembelajaran Online</h4>
+                        <p class="text-xs text-gray-600 truncate">by Budi Santoso</p>
+                    </div>
+
+                    <!-- Project Card 3 -->
+                    <div class="project-card w-full transition-transform duration-200 hover:scale-105">
+                        <div class="w-full aspect-square bg-gray-100 flex items-center justify-center border mb-2 rounded-lg overflow-hidden">
+                            <img src="/Images/project3.jpg" alt="Project 3" class="w-full h-full object-cover hover:opacity-90 transition-opacity duration-200">
+                        </div>
+                        <h4 class="text-sm font-medium truncate">Sistem Monitoring Kesehatan</h4>
+                        <p class="text-xs text-gray-600 truncate">by Dewi Lestari</p>
+                    </div>
+
+                    <!-- Project Card 4 -->
+                    <div class="project-card w-full transition-transform duration-200 hover:scale-105">
+                        <div class="w-full aspect-square bg-gray-100 flex items-center justify-center border mb-2 rounded-lg overflow-hidden">
+                            <img src="/Images/project4.jpg" alt="Project 4" class="w-full h-full object-cover hover:opacity-90 transition-opacity duration-200">
+                        </div>
+                        <h4 class="text-sm font-medium truncate">Aplikasi Manajemen Nutrisi</h4>
+                        <p class="text-xs text-gray-600 truncate">by Ahmad Rizki</p>
+                    </div>
+
+                    <!-- Project Card 5 -->
+                    <div class="project-card w-full transition-transform duration-200 hover:scale-105">
+                        <div class="w-full aspect-square bg-gray-100 flex items-center justify-center border mb-2 rounded-lg overflow-hidden">
+                            <img src="/Images/project5.jpg" alt="Project 5" class="w-full h-full object-cover hover:opacity-90 transition-opacity duration-200">
+                        </div>
+                        <h4 class="text-sm font-medium truncate">AI untuk Analisis Data Pendidikan</h4>
+                        <p class="text-xs text-gray-600 truncate">by Rina Wijaya</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#0C2D57] text-white mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Tentang MKM Center</h3>
+                    <p class="text-gray-300">Platform pembelajaran dan manajemen proyek untuk mahasiswa Indonesia.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Tautan</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white">Tentang Kami</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Kontak</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Bantuan</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Hubungi Kami</h3>
+                    <ul class="space-y-2">
+                        <li class="text-gray-300">Email: info@mkmcenter.id</li>
+                        <li class="text-gray-300">Tel: (021) 1234-5678</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center">
+                <p class="text-gray-300">&copy; 2024 MKM Center. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const dropdownButtons = document.querySelectorAll("[onclick^='toggleDropdown']");
+
+    dropdownButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            const targetId = this.getAttribute("onclick").match(/'([^']+)'/)[1];
+            const dropdown = document.getElementById(targetId);
+            const icon = this.querySelector("svg");
+
+            if (dropdown.classList.contains("hidden")) {
+                dropdown.classList.remove("hidden");
+                icon.classList.add("rotate-180");
+            } else {
+                dropdown.classList.add("hidden");
+                icon.classList.remove("rotate-180");
+            }
+        });
+    });
+});
+</script>
