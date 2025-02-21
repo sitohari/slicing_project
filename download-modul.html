@@ -65,7 +65,6 @@
         </div>
     </nav>
     
-    
     <!-- Main Content Container -->
     <div class="w-full mx-auto grid md:grid-cols-[300px_1fr] gap-6 mt-4 px-4 md:px-6 mb-5">
         <!-- Sidebar -->
@@ -111,7 +110,7 @@
                             </label>
                             <ul class="hidden peer-checked:block mt-2 space-y-2 pl-6">
                                 <li>
-                                    <a href="#" class="block p-3 text-lg font-medium text-gray-700 rounded-lg hover:bg-[#FC6736] hover:text-white transition">
+                                    <a href="/proyek-mahasiswa.html" class="block p-3 text-lg font-medium text-gray-700 rounded-lg hover:bg-[#FC6736] hover:text-white transition">
                                         Proyek Selesai
                                     </a>
                                 </li>
@@ -149,149 +148,63 @@
             </aside>
         </div>
         
-        <!-- Content Section -->
+        <!-- Download Section -->
         <main class="flex-1 bg-white shadow-lg rounded-lg p-6">
-            <h3 class="text-xl font-semibold mb-6 md:mb-8">Lihat Modul</h3>
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6">Download Modul </h2>
             
-            <!-- Module Section -->
-            <div class="mb-8 md:mb-12">
-                <div class="flex flex-col md:flex-row gap-6 md:gap-8">
-                    <div class="w-full md:w-[200px] flex-shrink-0">
-                        <div class="aspect-square rounded-lg overflow-hidden border bg-gray-100">
-                            <img src="/Images/image.png" 
-                                alt="cover-project" 
-                                class="w-full h-full object-cover">
+            <!-- Single Module Card Container -->
+            <div class="flex flex-col lg:flex-row bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+                <!-- Image Section  -->
+                <div class="lg:w-2/5 relative">
+                    <div class="md:max-h-full relative">
+                        <img src="/Images/image.png" 
+                                alt="Cover Modul"
+                                class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-[#FC6736] text-white px-3 py-1 rounded-full text-sm font-medium">
+                            New
                         </div>
                     </div>
-
-                    <!-- Content Container -->
-                    <div class="flex-1 flex flex-col">
-                        <div class="mb-4">
-                            <p class="text-sm text-gray-600 mb-1">Judul:</p>
-                            <h4 class="text-lg sm:text-base md:text-lg font-medium leading-tight">
-                                Modul Penguatan Kompetensi Kewarganegaraan Multikultural Pada Perguruan Tinggi
-                            </h4>
-                        </div>
-
-                        <div class="mb-4">
-                            <p class="text-sm text-gray-600 mb-1">Penulis:</p>
-                            <p class="font-medium">Mas Fierna Janvierna Lusie Putri S.Pd., M.Pd.</p>
-                        </div>
-
-                        <div class="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8 mt-auto">
-                            <div>
-                                <p class="text-sm text-gray-600 mb-1">Tahun:</p>
-                                <p class="font-medium">2025</p>
-                            </div>
-                            <button class="flex items-center justify-center sm:justify-start text-[#0C2D57] hover:text-[#FC6736] transition duration-200 ml-auto">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
-                                </svg>
-                                <span class="ml-2 text-sm font-medium ">Download</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <hr class="border-gray-200">
-
-            <!-- Proyek Section -->
-            <div class="mb-8 md:mb-12 mt-6 md:mt-8">
-                <div class="flex justify-between items-center mb-6">
-                    <h3 class="text-xl font-semibold">Proyek Terakhir</h3>
                 </div>
                 
-                <!-- Project Content -->
-                <div class="flex flex-col md:flex-row gap-6 md:gap-8 items-center md:items-start">
-                    <div class="w-full md:w-[200px] flex-shrink-0 ">
-                        <div class="aspect-square rounded-lg overflow-hidden border bg-gray-100">
-                            <img src="/Images/image.png" 
-                                    alt="cover-project" 
-                                    class="w-full h-full object-cover">
-                        </div>
-                    </div>
-                    <!-- Content Container -->
-                    <div class="flex-1 flex flex-col">
-                        <div class="mb-4">
-                            <p class="text-sm text-gray-600 mb-1">Judul:</p>
-                            <h4 class="text-lg sm:text-base md:text-lg font-medium leading-tight">
-                                Modul Penguatan Kompetensi Kewarganegaraan Multikultural Pada Perguruan Tinggi
-                            </h4>
-                        </div>
 
-                        <div class="mb-4">
-                            <p class="text-sm text-gray-600 mb-1">Kategori:</p>
-                            <p class="font-medium">Mas Fierna Janvierna Lusie Putri S.Pd., M.Pd.</p>
-                        </div>
-
-                        <div class="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8 mt-auto">
-                            <div>
-                                <p class="text-sm text-gray-600 mb-1">Tema:</p>
-                                <p class="font-medium">Pendidikan</p>
+                <!-- Content Section -->
+                <div class="lg:w-3/5 p-6 lg:p-8 flex flex-col justify-between">
+                    <div>
+                        <!-- Header -->
+                        <div class="mb-6">
+                            <h4 class="text-2xl font-bold text-gray-800 mb-2">Panduan Praktikum Digital</h4>
+                            <div class="flex items-center gap-4 text-gray-600 text-sm">
+                                <span class="flex items-center">
+                                    <i class="fas fa-user"></i>Dr. Jane Smith
+                                </span>
+                                <span class="flex items-center">
+                                    <i class="fas fa-calendar"></i>2024
+                                </span>
                             </div>
-                            <button class="flex items-center justify-center sm:justify-start text-[#0C2D57] hover:text-[#FC6736] transition duration-200 ml-auto">
-                                <span class="ml-2 text-sm font-medium ">Lihat Detail</span>
-                            </button>
+                        </div>
+
+                        <!-- Description -->
+                        <p class="text-gray-600 mb-6 line-clamp-3">
+                            Modul pembelajaran komprehensif yang mencakup aspek teoritis dan praktis dalam pengembangan digital modern. 
+                            Dirancang khusus untuk mahasiswa dan praktisi yang ingin meningkatkan keterampilan digital mereka.
+                        </p>
+
+                        <!-- Stats -->
+                        <div class="flex gap-4 mb-4">
+                            <div class="flex items-center bg-blue-50 px-4 py-2 rounded-full">
+                                <span class="text-blue-600 text-sm">📥 500+ Downloads</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <hr class="border-gray-200">
-
-            <!-- Proyek Mahasiswa Section -->
-            <div class="mb-8 md:mb-12 mt-6 md:mt-8">
-                <div class="flex justify-between items-center mb-6">
-                    <h3 class="text-xl font-semibold">Proyek Mahasiswa</h3>
-                    <a href="#" class="text-sm text-[#0C2D57] hover:text-[#FC6736] hover:underline transition-colors duration-200">Lainnya...</a>
-                </div>
-
-                <!-- Projects Grid Container - Responsive Grid -->
-                <div class="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-                    <!-- Project Card 1 -->
-                    <div class="project-card w-full transition-transform duration-200 hover:scale-105">
-                        <div class="w-full aspect-square bg-gray-100 flex items-center justify-center border mb-2 rounded-lg overflow-hidden">
-                            <img src="/Images/project1.jpg" alt="Project 1" class="w-full h-full object-cover hover:opacity-90 transition-opacity duration-200">
-                        </div>
-                        <h4 class="text-sm font-medium truncate">Aplikasi Pendidikan Anak</h4>
-                        <p class="text-xs text-gray-600 truncate">by Siti Nurhaliza</p>
-                    </div>
-
-                    <!-- Project Card 2 -->
-                    <div class="project-card w-full transition-transform duration-200 hover:scale-105">
-                        <div class="w-full aspect-square bg-gray-100 flex items-center justify-center border mb-2 rounded-lg overflow-hidden">
-                            <img src="/Images/project2.jpg" alt="Project 2" class="w-full h-full object-cover hover:opacity-90 transition-opacity duration-200">
-                        </div>
-                        <h4 class="text-sm font-medium truncate">Platform Pembelajaran Online</h4>
-                        <p class="text-xs text-gray-600 truncate">by Budi Santoso</p>
-                    </div>
-
-                    <!-- Project Card 3 -->
-                    <div class="project-card w-full transition-transform duration-200 hover:scale-105">
-                        <div class="w-full aspect-square bg-gray-100 flex items-center justify-center border mb-2 rounded-lg overflow-hidden">
-                            <img src="/Images/project3.jpg" alt="Project 3" class="w-full h-full object-cover hover:opacity-90 transition-opacity duration-200">
-                        </div>
-                        <h4 class="text-sm font-medium truncate">Sistem Monitoring Kesehatan</h4>
-                        <p class="text-xs text-gray-600 truncate">by Dewi Lestari</p>
-                    </div>
-
-                    <!-- Project Card 4 -->
-                    <div class="project-card w-full transition-transform duration-200 hover:scale-105">
-                        <div class="w-full aspect-square bg-gray-100 flex items-center justify-center border mb-2 rounded-lg overflow-hidden">
-                            <img src="/Images/project4.jpg" alt="Project 4" class="w-full h-full object-cover hover:opacity-90 transition-opacity duration-200">
-                        </div>
-                        <h4 class="text-sm font-medium truncate">Aplikasi Manajemen Nutrisi</h4>
-                        <p class="text-xs text-gray-600 truncate">by Ahmad Rizki</p>
-                    </div>
-
-                    <!-- Project Card 5 -->
-                    <div class="project-card w-full transition-transform duration-200 hover:scale-105">
-                        <div class="w-full aspect-square bg-gray-100 flex items-center justify-center border mb-2 rounded-lg overflow-hidden">
-                            <img src="/Images/project5.jpg" alt="Project 5" class="w-full h-full object-cover hover:opacity-90 transition-opacity duration-200">
-                        </div>
-                        <h4 class="text-sm font-medium truncate">AI untuk Analisis Data Pendidikan</h4>
-                        <p class="text-xs text-gray-600 truncate">by Rina Wijaya</p>
+                    <!-- Download Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#" class="flex-1 bg-[#FC6736] text-white px-6 py-3 rounded-lg text-center font-semibold hover:bg-[#e55826] transform hover:-translate-y-1 transition-all duration-200">
+                            Download Modul
+                        </a>
+                        <a href="#" class="flex-1 bg-gray-800 text-white px-6 py-3 rounded-lg text-center font-semibold hover:bg-gray-700 transform hover:-translate-y-1 transition-all duration-200">
+                            Download Template
+                        </a>
                     </div>
                 </div>
             </div>
@@ -329,3 +242,4 @@
     </footer>
 </body>
 </html>
+

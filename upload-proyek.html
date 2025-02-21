@@ -111,7 +111,7 @@
                             </label>
                             <ul class="hidden peer-checked:block mt-2 space-y-2 pl-6">
                                 <li>
-                                    <a href="#" class="block p-3 text-lg font-medium text-gray-700 rounded-lg hover:bg-[#FC6736] hover:text-white transition">
+                                    <a href="/my-proyek.html" class="block p-3 text-lg font-medium text-gray-700 rounded-lg hover:bg-[#FC6736] hover:text-white transition">
                                         Proyek Selesai
                                     </a>
                                 </li>
@@ -149,155 +149,67 @@
             </aside>
         </div>
         
-        <!-- Content Section -->
-        <main class="flex-1 bg-white shadow-lg rounded-lg p-6">
-            <h3 class="text-xl font-semibold mb-6 md:mb-8">Lihat Modul</h3>
-            
-            <!-- Module Section -->
-            <div class="mb-8 md:mb-12">
-                <div class="flex flex-col md:flex-row gap-6 md:gap-8">
-                    <div class="w-full md:w-[200px] flex-shrink-0">
-                        <div class="aspect-square rounded-lg overflow-hidden border bg-gray-100">
-                            <img src="/Images/image.png" 
-                                alt="cover-project" 
-                                class="w-full h-full object-cover">
-                        </div>
-                    </div>
+        <!-- Main Content -->
+        <main class="bg-white shadow-lg rounded-lg p-6">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6">Upload Proyek</h2>
+            <form class="space-y-6 w-full">
+                <!-- Kategori Dropdown -->
+                <div class="space-y-2">
+                    <label for="kategori" class="block text-sm font-medium text-gray-700">Pilih Kategori</label>
+                    <select id="kategori" name="kategori" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FC6736] focus:border-[#FC6736]">
+                        <option value="">Pilih Kategori</option>
+                        <option value="">Teknologi</option>
+                        <option value="">Kesehatan</option>
+                        <option value=""">Pendidikan</option>
+                    </select>
+                </div>
+                <div class="space-y-2">
+                    <label for="tema" class="block text-sm font-medium text-gray-700">Pilih Tema</label>
+                    <select id="tema" name="tema" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FC6736] focus:border-[#FC6736]">
+                        <option value="">Pilih Kategori</option>
+                        <option value="">Hukum Pidana</option>
+                        <option value="">Hukum Perdata</option>
+                        <option value="">Hukum Lingkungan</option>
+                    </select>
+                </div>
 
-                    <!-- Content Container -->
-                    <div class="flex-1 flex flex-col">
-                        <div class="mb-4">
-                            <p class="text-sm text-gray-600 mb-1">Judul:</p>
-                            <h4 class="text-lg sm:text-base md:text-lg font-medium leading-tight">
-                                Modul Penguatan Kompetensi Kewarganegaraan Multikultural Pada Perguruan Tinggi
-                            </h4>
-                        </div>
+                <!-- Judul Input -->
+                <div class="space-y-2">
+                    <label for="judul" class="block text-sm font-medium text-gray-700">Judul Proyek</label>
+                    <input type="text" id="judul" name="judul" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FC6736] focus:border-[#FC6736]" placeholder="Masukkan judul proyek">
+                </div>
 
-                        <div class="mb-4">
-                            <p class="text-sm text-gray-600 mb-1">Penulis:</p>
-                            <p class="font-medium">Mas Fierna Janvierna Lusie Putri S.Pd., M.Pd.</p>
-                        </div>
-
-                        <div class="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8 mt-auto">
-                            <div>
-                                <p class="text-sm text-gray-600 mb-1">Tahun:</p>
-                                <p class="font-medium">2025</p>
+                <!-- File Upload -->
+                <div class="space-y-2">
+                    <label for="file" class="block text-sm font-medium text-gray-700">Upload File</label>
+                    <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-lg">
+                        <div class="space-y-1 text-center">
+                            <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
+                                <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <div class="flex text-sm text-gray-600">
+                                <label for="file-upload" class="relative cursor-pointer bg-white rounded-md font-medium text-[#FC6736] hover:text-[#e85925] focus-within:outline-none">
+                                    <span>Upload file</span>
+                                    <input id="file-upload" name="file-upload" type="file" class="sr-only">
+                                </label>
+                                <p class="pl-1">atau drag and drop</p>
                             </div>
-                            <button class="flex items-center justify-center sm:justify-start text-[#0C2D57] hover:text-[#FC6736] transition duration-200 ml-auto">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
-                                </svg>
-                                <span class="ml-2 text-sm font-medium ">Download</span>
-                            </button>
+                            <p class="text-xs text-gray-500">PDF, DOC up to 10MB</p>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <hr class="border-gray-200">
-
-            <!-- Proyek Section -->
-            <div class="mb-8 md:mb-12 mt-6 md:mt-8">
-                <div class="flex justify-between items-center mb-6">
-                    <h3 class="text-xl font-semibold">Proyek Terakhir</h3>
+                <!-- Submit Button -->
+                <div class="flex justify-end">
+                    <button type="submit" class="px-6 py-2 bg-[#FC6736] text-white rounded-lg hover:bg-[#e85925] transition-colors duration-200">
+                        Upload Proyek
+                    </button>
                 </div>
-                
-                <!-- Project Content -->
-                <div class="flex flex-col md:flex-row gap-6 md:gap-8 items-center md:items-start">
-                    <div class="w-full md:w-[200px] flex-shrink-0 ">
-                        <div class="aspect-square rounded-lg overflow-hidden border bg-gray-100">
-                            <img src="/Images/image.png" 
-                                    alt="cover-project" 
-                                    class="w-full h-full object-cover">
-                        </div>
-                    </div>
-                    <!-- Content Container -->
-                    <div class="flex-1 flex flex-col">
-                        <div class="mb-4">
-                            <p class="text-sm text-gray-600 mb-1">Judul:</p>
-                            <h4 class="text-lg sm:text-base md:text-lg font-medium leading-tight">
-                                Modul Penguatan Kompetensi Kewarganegaraan Multikultural Pada Perguruan Tinggi
-                            </h4>
-                        </div>
-
-                        <div class="mb-4">
-                            <p class="text-sm text-gray-600 mb-1">Kategori:</p>
-                            <p class="font-medium">Mas Fierna Janvierna Lusie Putri S.Pd., M.Pd.</p>
-                        </div>
-
-                        <div class="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8 mt-auto">
-                            <div>
-                                <p class="text-sm text-gray-600 mb-1">Tema:</p>
-                                <p class="font-medium">Pendidikan</p>
-                            </div>
-                            <button class="flex items-center justify-center sm:justify-start text-[#0C2D57] hover:text-[#FC6736] transition duration-200 ml-auto">
-                                <span class="ml-2 text-sm font-medium ">Lihat Detail</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <hr class="border-gray-200">
-
-            <!-- Proyek Mahasiswa Section -->
-            <div class="mb-8 md:mb-12 mt-6 md:mt-8">
-                <div class="flex justify-between items-center mb-6">
-                    <h3 class="text-xl font-semibold">Proyek Mahasiswa</h3>
-                    <a href="#" class="text-sm text-[#0C2D57] hover:text-[#FC6736] hover:underline transition-colors duration-200">Lainnya...</a>
-                </div>
-
-                <!-- Projects Grid Container - Responsive Grid -->
-                <div class="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-                    <!-- Project Card 1 -->
-                    <div class="project-card w-full transition-transform duration-200 hover:scale-105">
-                        <div class="w-full aspect-square bg-gray-100 flex items-center justify-center border mb-2 rounded-lg overflow-hidden">
-                            <img src="/Images/project1.jpg" alt="Project 1" class="w-full h-full object-cover hover:opacity-90 transition-opacity duration-200">
-                        </div>
-                        <h4 class="text-sm font-medium truncate">Aplikasi Pendidikan Anak</h4>
-                        <p class="text-xs text-gray-600 truncate">by Siti Nurhaliza</p>
-                    </div>
-
-                    <!-- Project Card 2 -->
-                    <div class="project-card w-full transition-transform duration-200 hover:scale-105">
-                        <div class="w-full aspect-square bg-gray-100 flex items-center justify-center border mb-2 rounded-lg overflow-hidden">
-                            <img src="/Images/project2.jpg" alt="Project 2" class="w-full h-full object-cover hover:opacity-90 transition-opacity duration-200">
-                        </div>
-                        <h4 class="text-sm font-medium truncate">Platform Pembelajaran Online</h4>
-                        <p class="text-xs text-gray-600 truncate">by Budi Santoso</p>
-                    </div>
-
-                    <!-- Project Card 3 -->
-                    <div class="project-card w-full transition-transform duration-200 hover:scale-105">
-                        <div class="w-full aspect-square bg-gray-100 flex items-center justify-center border mb-2 rounded-lg overflow-hidden">
-                            <img src="/Images/project3.jpg" alt="Project 3" class="w-full h-full object-cover hover:opacity-90 transition-opacity duration-200">
-                        </div>
-                        <h4 class="text-sm font-medium truncate">Sistem Monitoring Kesehatan</h4>
-                        <p class="text-xs text-gray-600 truncate">by Dewi Lestari</p>
-                    </div>
-
-                    <!-- Project Card 4 -->
-                    <div class="project-card w-full transition-transform duration-200 hover:scale-105">
-                        <div class="w-full aspect-square bg-gray-100 flex items-center justify-center border mb-2 rounded-lg overflow-hidden">
-                            <img src="/Images/project4.jpg" alt="Project 4" class="w-full h-full object-cover hover:opacity-90 transition-opacity duration-200">
-                        </div>
-                        <h4 class="text-sm font-medium truncate">Aplikasi Manajemen Nutrisi</h4>
-                        <p class="text-xs text-gray-600 truncate">by Ahmad Rizki</p>
-                    </div>
-
-                    <!-- Project Card 5 -->
-                    <div class="project-card w-full transition-transform duration-200 hover:scale-105">
-                        <div class="w-full aspect-square bg-gray-100 flex items-center justify-center border mb-2 rounded-lg overflow-hidden">
-                            <img src="/Images/project5.jpg" alt="Project 5" class="w-full h-full object-cover hover:opacity-90 transition-opacity duration-200">
-                        </div>
-                        <h4 class="text-sm font-medium truncate">AI untuk Analisis Data Pendidikan</h4>
-                        <p class="text-xs text-gray-600 truncate">by Rina Wijaya</p>
-                    </div>
-                </div>
-            </div>
+            </form>
         </main>
     </div>
 
+    
     <!-- Footer -->
     <footer class="bg-[#0C2D57] text-white mt-auto">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -329,3 +241,4 @@
     </footer>
 </body>
 </html>
+
